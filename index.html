@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b111d" />
+    <meta name="description" content="Signal Atlas：追蹤 AI、半導體、電力、金屬與材料的美股供應鏈研究工作區。" />
+    <title>Signal Atlas｜AI 供應鏈追蹤台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span><b>signal</b><small>ATLAS</small></span>
+        </a>
+        <nav>
+          <p class="nav-label">WORKSPACE</p>
+          <a class="nav-item active" href="#overview"><span>◈</span>總覽</a>
+          <a class="nav-item" href="#watchlist"><span>◌</span>追蹤清單 <em id="watchCount">12</em></a>
+          <a class="nav-item" href="#journal"><span>▤</span>研究日誌</a>
+          <a class="nav-item" href="#map"><span>⌁</span>供應鏈地圖</a>
+          <p class="nav-label">INSIGHTS</p>
+          <a class="nav-item" href="#signals"><span>✦</span>市場訊號 <i>3</i></a>
+          <a class="nav-item" href="#calendar"><span>◷</span>事件日曆</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="sync-card"><span class="pulse"></span><div><b>資料已同步</b><small>今日 09:42 更新</small></div></div>
+          <button class="settings"><span>⚙</span>偏好設定</button>
+          <div class="profile"><div class="avatar">W</div><div><b>William</b><small>個人工作區</small></div><span>⋮</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>WORKSPACE</span><b>/</b> AI 供應鏈雷達</div>
+          <div class="top-actions"><span class="last-sync">● LIVE&nbsp; 美東 09:42</span><button class="icon-btn" aria-label="通知">♧<i>3</i></button><button class="avatar mini">W</button></div>
+        </header>
+
+        <section class="hero" id="overview">
+          <div>
+            <p class="eyebrow">THURSDAY, OCTOBER 15, 2026 <span class="line"></span> SESSION 42</p>
+            <h1>早安，William<span class="accent">.</span></h1>
+            <p class="hero-subtitle">今天的市場由 <strong>AI 基礎建設</strong> 主導，先看核心訊號。</p>
+          </div>
+          <button class="primary-btn" id="addAssetBtn"><span>＋</span> 新增追蹤標的</button>
+        </section>
+
+        <section class="metric-grid">
+          <article class="metric-card"><div class="metric-head"><span>追蹤標的</span><span class="metric-icon blue">◈</span></div><strong id="assetMetric">12</strong><small><b class="up">+2</b> 本月新增</small></article>
+          <article class="metric-card"><div class="metric-head"><span>今日訊號</span><span class="metric-icon orange">✦</span></div><strong>08</strong><small><b class="up">↑ 3</b> 高於昨日</small></article>
+          <article class="metric-card"><div class="metric-head"><span>組合 1D 變化</span><span class="metric-icon green">↗</span></div><strong class="up">+1.84%</strong><small><b class="up">+$1,248.20</b> 未實現損益</small></article>
+          <article class="metric-card"><div class="metric-head"><span>下個事件</span><span class="metric-icon purple">◷</span></div><strong class="date-metric">10.28</strong><small>TSM 財報 · <b>13 天後</b></small></article>
+        </section>
+
+        <div class="section-row">
+          <div class="section-title"><h2>市場溫度</h2><span class="updated">●  即時估算</span></div>
+          <div class="range-tabs"><button>1D</button><button class="selected">1W</button><button>1M</button><button>3M</button><button>YTD</button></div>
+        </div>
+        <section class="chart-card">
+          <div class="chart-summary"><strong>+4.62%</strong><span class="up">↑ 0.38% 今日</span><small>AI 基礎建設籃子</small></div>
+          <div class="chart-wrap"><svg viewBox="0 0 900 240" preserveAspectRatio="none" role="img" aria-label="AI基礎建設籃子一週走勢圖"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#65e6b0" stop-opacity=".24"/><stop offset="100%" stop-color="#65e6b0" stop-opacity="0"/></linearGradient></defs><g class="grid-lines"><path d="M0 30H900M0 88H900M0 146H900M0 204H900"/></g><path class="area" d="M0 186 L75 165 L150 172 L225 130 L300 142 L375 92 L450 105 L525 78 L600 98 L675 52 L750 72 L825 35 L900 48 V240 H0Z"/><path class="chart-line" d="M0 186 L75 165 L150 172 L225 130 L300 142 L375 92 L450 105 L525 78 L600 98 L675 52 L750 72 L825 35 L900 48"/><circle cx="900" cy="48" r="5" class="end-dot"/></svg><div class="x-labels"><span>10/09</span><span>10/10</span><span>10/13</span><span>10/14</span><span>10/15</span></div></div>
+        </section>
+
+        <div class="content-grid">
+          <section class="watch-section" id="watchlist">
+            <div class="section-row compact"><div class="section-title"><h2>我的雷達</h2><span class="count-pill" id="listCount">12 個標的</span></div><button class="text-btn" id="manageBtn">管理清單 →</button></div>
+            <div class="filter-row"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="core">核心資產</button><button class="filter" data-filter="infra">AI 基礎建設</button><button class="filter" data-filter="materials">原料與材料</button><button class="filter" data-filter="etf">ETF</button></div>
+            <div class="asset-table"><div class="table-head"><span>標的</span><span>價格 (USD)</span><span>1D</span><span>趨勢</span><span>訊號</span></div><div id="assetRows"></div></div>
+          </section>
+
+          <aside class="insight-column" id="signals">
+            <div class="section-row compact"><div class="section-title"><h2>今日洞察</h2></div><span class="small-link">查看全部</span></div>
+            <article class="insight-card highlight"><div class="insight-top"><span class="tag green-tag">SUPPLY CHAIN</span><time>2H AGO</time></div><h3>銅價突破關鍵阻力位，AI 資料中心擴建需求持續升溫。</h3><p>銅是電力傳輸與散熱的關鍵材料。LME 庫存下降 8.2%，值得關注...</p><a href="#journal">閱讀分析 <span>→</span></a></article>
+            <article class="insight-card"><div class="insight-top"><span class="tag purple-tag">EARNINGS</span><time>5H AGO</time></div><h3>TSM 先進封裝訂單能見度延伸至 2027。</h3><a href="#calendar">查看事件 <span>→</span></a></article>
+            <article class="insight-card"><div class="insight-top"><span class="tag orange-tag">SIGNAL</span><time>8H AGO</time></div><h3>「電力瓶頸」成為 AI 基礎建設的新風險。</h3><a href="#map">探索供應鏈 <span>→</span></a></article>
+            <div class="quote-card"><span class="quote-mark">“</span><p>真正的 AI 投資，不只是模型，而是支撐它運轉的整個世界。</p><small>— Signal Atlas 投資筆記</small></div>
+          </aside>
+        </div>
+        <footer><span>Signal Atlas v1.0 · Personal Intelligence Workspace</span><span>資料僅供研究參考，不構成投資建議。</span></footer>
+      </main>
+    </div>
+
+    <dialog id="assetDialog"><form method="dialog" id="assetForm"><div class="dialog-head"><div><span class="eyebrow">NEW ASSET</span><h2>加入追蹤標的</h2></div><button class="close-btn" value="cancel">×</button></div><label>代號或名稱<input id="tickerInput" required placeholder="例如：NVDA、鋰、電網" /></label><label>分類<select id="categoryInput"><option value="core">核心資產</option><option value="infra">AI 基礎建設</option><option value="materials">原料與材料</option><option value="etf">ETF</option></select></label><button class="primary-btn full" value="default">加入雷達</button></form></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
