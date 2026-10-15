@@ -15,7 +15,6 @@ const extraAssets = [
   { ticker: "SMH", name: "Semiconductor ETF", category: "etf", price: "331.18", change: "+1.05%", tone: "blue", signal: "bullish", label: "強勢" }
 ];
 let assets = JSON.parse(localStorage.getItem("signal-atlas-assets") || "null") || [...seedAssets, ...extraAssets];
-const labels = { core: "核心資產", infra: "AI 基礎建設", materials: "原料與材料", etf: "ETF" };
 const rows = document.querySelector("#assetRows");
 
 function sparkline(asset, index) {
@@ -53,4 +52,35 @@ document.querySelector("#assetForm").addEventListener("submit", event => {
   dialog.close();
 });
 document.querySelector("#manageBtn").addEventListener("click", () => document.querySelector("#addAssetBtn").click());
+
+function applyMarketData(payload) {
+  const quotes = payload.quotes || {};
+  assets = assets.map(asset => {
+    const quote = quotes[asset.ticker];
+    if (!quote) return asset;
+    const change = Number(quote.change);
+    return {
+      ...asset,
+      price: Number(quote.price).toFixed(2),
+      change: `${change >= 0 ? "+" : ""}${change.toFixed(2)}%`,
+      signal: change >= 1 ? "bullish" : change <= -1 ? "watch" : "neutral",
+      label: change >= 1 ? "強勢" : change <= -1 ? "觀察" : "中性"
+    };
+  });
+  localStorage.setItem("signal-atlas-assets", JSON.stringify(assets));
+  const timestamp = payload.updatedAt ? new Date(payload.updatedAt).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit" }) : "DEMO";
+  document.querySelector("#dataTimestamp").textContent = timestamp;
+}
+
 render();
+fetch("market-data.json", { cache: "no-store" })
+  .then(response => {
+    if (!response.ok) throw new Error(`Market data request failed: ${response.status}`);
+    return response.json();
+  })
+  .then(applyMarketData)
+  .then(() => render(document.querySelector(".filter.active").dataset.filter))
+  .catch(error => {
+    console.warn("Using fallback market data:", error.message);
+    document.querySelector("#dataTimestamp").textContent = "FALLBACK";
+  });
