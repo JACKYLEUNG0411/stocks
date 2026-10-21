@@ -1,54 +1,54 @@
 {
   "source": "Yahoo Finance chart API",
-  "updatedAt": "2026-10-21T17:56:51.110552+00:00",
+  "updatedAt": "2026-10-21T21:32:08.289100+00:00",
   "quotes": {
     "QQQ": {
-      "price": 726.61,
-      "change": -0.32
+      "price": 725.2,
+      "change": -0.51
     },
     "NVDA": {
-      "price": 221.63,
-      "change": 0.15
+      "price": 221.97,
+      "change": 0.3
     },
     "TSM": {
-      "price": 429.66,
-      "change": -0.08
+      "price": 431.89,
+      "change": 0.44
     },
     "MU": {
-      "price": 918.47,
-      "change": 0.47
+      "price": 913.67,
+      "change": -0.05
     },
     "VRT": {
-      "price": 214.08,
-      "change": -3.93
+      "price": 212.15,
+      "change": -4.79
     },
     "COPX": {
-      "price": 78.25,
-      "change": -3.17
+      "price": 78.02,
+      "change": -3.46
     },
     "LIT": {
-      "price": 63.33,
-      "change": -4.6
+      "price": 63.2,
+      "change": -4.79
     },
     "ANET": {
-      "price": 183.59,
-      "change": -6.05
+      "price": 184.33,
+      "change": -5.67
     },
     "ASML": {
-      "price": 1675.97,
-      "change": 1.57
+      "price": 1676.69,
+      "change": 1.62
     },
     "CEG": {
-      "price": 271.92,
-      "change": -2.73
+      "price": 270.74,
+      "change": -3.15
     },
     "FCX": {
-      "price": 68.85,
-      "change": -1.11
+      "price": 68.9,
+      "change": -1.03
     },
     "SMH": {
-      "price": 557.11,
-      "change": -1.35
+      "price": 556.7,
+      "change": -1.42
     }
   },
   "failures": []
