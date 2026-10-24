@@ -1,0 +1,22 @@
+(() => {
+  const story = document.querySelector('.spatial-timeline');
+  if (!story) return;
+  const style = document.createElement('link'); style.rel='stylesheet'; style.href='node-panels.css?v=node-panels-20261024'; document.head.append(style);
+  const nodes = [
+    {theme:'#ff9f56',rgb:'255,159,86',role:'COMPUTE DEMAND',price:'NVDA',change:'+2.41%',priceLabel:'GPU / 加速器',metrics:['算力需求','伺服器資本支出','核心資產'],trend:'2,5 18,18 34,11 50,16 66,6 82,10 98,2'},
+    {theme:'#d6dde4',rgb:'214,221,228',role:'FABRICATION',price:'TSM',change:'+1.17%',priceLabel:'晶圓 / 先進製程',metrics:['製程能力','設備週期','核心資產'],trend:'2,18 18,15 34,17 50,8 66,12 82,7 98,4'},
+    {theme:'#9f8cff',rgb:'159,140,255',role:'MEMORY BANDWIDTH',price:'MU',change:'-0.38%',priceLabel:'記憶體 / HBM',metrics:['頻寬需求','資料流','核心資產'],trend:'2,5 18,9 34,7 50,16 66,12 82,19 98,15'},
+    {theme:'#ffc45f',rgb:'255,196,95',role:'POWER + COOLING',price:'VRT',change:'+3.08%',priceLabel:'電力 / 散熱',metrics:['資料中心','電網負載','基礎建設'],trend:'2,21 18,17 34,18 50,10 66,12 82,5 98,2'},
+    {theme:'#e87945',rgb:'232,121,69',role:'CONDUCTIVE METALS',price:'COPX',change:'+1.92%',priceLabel:'銅 / 導電材料',metrics:['網路擴張','變壓器','材料層'],trend:'2,20 18,14 34,18 50,10 66,13 82,7 98,3'},
+    {theme:'#b78cff',rgb:'183,140,255',role:'STRATEGIC MATERIALS',price:'REMX',change:'待更新',priceLabel:'稀土 / 戰略材料',metrics:['磁材供應','電池材料','材料層'],trend:'2,18 18,16 34,12 50,14 66,8 82,10 98,5'}
+  ];
+  const modeTool=document.createElement('div'); modeTool.className='node-panel-tool'; modeTool.innerHTML='<button class="mode-button active" data-mode="presentation">展示模式</button><button class="mode-button" data-mode="research">研究模式</button>'; document.body.append(modeTool);
+  const setMode=mode=>{story.classList.toggle('research-mode',mode==='research');story.classList.toggle('presentation-mode',mode!=='research');modeTool.querySelectorAll('.mode-button').forEach(button=>button.classList.toggle('active',button.dataset.mode===mode));localStorage.setItem('signal-atlas-mode',mode)};
+  modeTool.addEventListener('click',event=>{const button=event.target.closest('.mode-button');if(button)setMode(button.dataset.mode)}); setMode(localStorage.getItem('signal-atlas-mode')||'presentation');
+  const cards=[...story.querySelectorAll('.timeline-node')];
+  cards.forEach((card,index)=>{const data=nodes[index];card.style.setProperty('--node-accent',data.theme);card.style.setProperty('--node-rgb',data.rgb);const panel=document.createElement('div');panel.className='node-panel';panel.innerHTML=`<div class="node-panel-head"><div><span class="node-panel-role">${data.role}</span><b>${data.priceLabel}</b></div><div class="node-panel-price"><b>${data.change}</b><span>1D MOVE · LIVE</span></div></div><div class="node-panel-grid">${data.metrics.map((metric,metricIndex)=>`<div><b>${metricIndex===0?'ACTIVE':metricIndex===1?'5D':'LAYER'}</b><span>${metric}</span></div>`).join('')}</div><svg class="node-panel-trend" viewBox="0 0 100 24" preserveAspectRatio="none"><polyline points="${data.trend}"/></svg><span class="node-panel-arrow">NEXT LAYER</span></div>`;card.append(panel);});
+  const causal=['GPU 需求','晶圓設備','記憶體頻寬','電力與散熱','銅與材料','供應安全']; cards.forEach((card,index)=>{const label=document.createElement('span');label.className='causal-label';label.textContent=causal[index];card.append(label)});
+  const status=document.createElement('div');status.className='deploy-status pending';status.textContent='DEPLOY CHECK · CHECKING';document.body.append(status);
+  const checkDeploy=async()=>{try{const [commitResponse,runsResponse]=await Promise.all([fetch('https://api.github.com/repos/JACKYLEUNG0411/stocks/commits/main',{headers:{Accept:'application/vnd.github+json'}}),fetch('https://api.github.com/repos/JACKYLEUNG0411/stocks/actions/workflows/pages-build-deployment/runs?branch=main&per_page=1',{headers:{Accept:'application/vnd.github+json'}})]);if(!commitResponse.ok||!runsResponse.ok)throw new Error('GitHub status unavailable');const commit=await commitResponse.json();const runs=await runsResponse.json();const run=runs.workflow_runs?.[0];const short=commit.sha.slice(0,7);if(run?.head_sha===commit.sha&&run.conclusion==='success'){status.className='deploy-status ok';status.textContent=`DEPLOYED · ${short}`}else{status.className='deploy-status pending';status.textContent=`DEPLOYING · ${short}`}}catch(error){status.className='deploy-status error';status.textContent='DEPLOY CHECK · UNAVAILABLE'}};
+  checkDeploy(); setInterval(checkDeploy,60000);
+})();
