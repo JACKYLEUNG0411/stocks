@@ -1,0 +1,25 @@
+:root{--space:#090a0d;--ink:#f5f1e9;--warm:#e5a45c;--warm-bright:#ffd39a;--cool:#8dd8d0;--glass:rgba(22,23,27,.78)}
+html{background:#090a0d}
+body{background:radial-gradient(ellipse at 50% 18%,rgba(142,74,35,.2),transparent 34%),radial-gradient(circle at 15% 72%,rgba(190,126,58,.11),transparent 28%),linear-gradient(180deg,#090a0d 0%,#161318 48%,#090a0d 100%);color:var(--ink)}
+body:before{opacity:.12;background-image:linear-gradient(rgba(255,198,129,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,198,129,.05) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(#000 8%,transparent 70%)}
+body:after{background:radial-gradient(circle,rgba(229,164,92,.16),transparent 68%)}
+.spatial-void{background:radial-gradient(ellipse at 50% 35%,rgba(229,164,92,.07),transparent 34%),linear-gradient(180deg,rgba(9,10,13,.06),rgba(9,10,13,.72));mix-blend-mode:normal}
+.spatial-void:before{background:radial-gradient(circle at 36% 28%,rgba(229,164,92,.19),transparent 22%),radial-gradient(circle,rgba(141,216,208,.06),transparent 64%);box-shadow:0 0 100px rgba(229,164,92,.08)}
+.starfield{opacity:.32;background-image:radial-gradient(circle,rgba(255,221,181,.7) 0 1px,transparent 1.5px),radial-gradient(circle,rgba(141,216,208,.45) 0 1px,transparent 1.5px)}
+.scanline{opacity:.08!important}
+.spatial-timeline{min-height:580vh;background:linear-gradient(180deg,transparent,rgba(229,164,92,.035),transparent)}
+.timeline-camera{background:radial-gradient(ellipse at 50% 48%,transparent 0 30%,rgba(9,10,13,.18) 76%);}
+.timeline-svg{opacity:.35;transform:translateZ(-90px) scale(.84)}
+.timeline-svg path{stroke:rgba(255,211,154,.24);stroke-width:1;stroke-dasharray:3 15;animation:none!important}
+.timeline-svg path.active{stroke:var(--warm);stroke-width:1.5;filter:drop-shadow(0 0 5px rgba(229,164,92,.55));stroke-dasharray:7 12;animation:energy-flow 1.4s linear infinite!important}
+.timeline-svg circle{fill:#1b1717;stroke:rgba(255,211,154,.28);stroke-width:1}.timeline-svg circle.active{fill:var(--warm-bright);stroke:#fff5e6;filter:drop-shadow(0 0 10px var(--warm))}
+.timeline-node{left:50%!important;width:min(440px,40vw);min-height:245px;padding:28px 30px;border-color:rgba(255,211,154,.2);background:linear-gradient(145deg,rgba(37,31,29,.91),rgba(16,16,19,.82));box-shadow:0 30px 90px rgba(0,0,0,.62),inset 0 1px rgba(255,238,205,.1);backdrop-filter:blur(26px) saturate(115%);transition:opacity .18s,filter .18s,border-color .18s,box-shadow .18s}
+.timeline-node.active{border-color:rgba(255,211,154,.78);box-shadow:0 0 58px rgba(229,164,92,.18),0 30px 90px rgba(0,0,0,.65),inset 0 1px rgba(255,238,205,.14)}
+.timeline-node h3{font-size:30px;color:#fff7ed}.timeline-node p{color:#c3b7aa}.timeline-node .node-index{color:var(--warm-bright)}.timeline-node .node-assets span{color:#eadfce;background:rgba(229,164,92,.1);border-color:rgba(255,211,154,.2)}.timeline-node .node-assets span:first-child{color:#21170d;background:var(--warm-bright);border-color:var(--warm-bright)}
+.camera-hud,.realtime-readout{border-color:rgba(255,211,154,.22);background:rgba(20,17,17,.72);box-shadow:0 12px 38px rgba(0,0,0,.28)}.camera-hud b,.realtime-readout b{color:var(--warm-bright)}
+.timeline-intro{color:#bda98f}.timeline-intro strong{color:#fff7ed}.timeline-intro span{color:var(--warm-bright)}
+.timeline-progress button{border-color:#9e856b}.timeline-progress button.active{background:var(--warm-bright);border-color:var(--warm-bright);box-shadow:0 0 12px var(--warm)}
+.spatial-intro{background:radial-gradient(ellipse at 50% 50%,rgba(229,164,92,.08),transparent 42%)}.spatial-copy h2{background:linear-gradient(110deg,#fff9ef 15%,#ffd39a 54%,#e5a45c 82%);-webkit-background-clip:text;background-clip:text}.spatial-copy p{color:#c8b9a8}.spatial-kicker,.scroll-cue{color:var(--warm-bright)}
+.metric-card,.chart-card,.asset-table,.insight-card,.quote-card{background:linear-gradient(145deg,rgba(37,31,29,.82),rgba(16,16,19,.78));border-color:rgba(255,211,154,.16)}
+@media(max-width:900px){.timeline-node{width:min(390px,76vw)}}
+@media(max-width:650px){.timeline-node{width:86vw;min-height:205px;padding:22px}.timeline-node h3{font-size:23px}.timeline-node p{font-size:11px}}
