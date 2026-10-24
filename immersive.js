@@ -2,10 +2,10 @@
   const main = document.querySelector('.main-content');
   if (!main) return;
   const load = (tag, attrs) => { const element = document.createElement(tag); Object.assign(element, attrs); document.head.append(element); };
-  load('link', { rel:'stylesheet', href:'immersive-v2.css' });
-  load('link', { rel:'stylesheet', href:'choice-layer.css' });
-  load('link', { rel:'stylesheet', href:'visual-rebalance.css' });
-  const bilingual = document.createElement('script'); bilingual.src = 'bilingual.js'; document.body.append(bilingual);
+  load('link', { rel:'stylesheet', href:'immersive-v2.css?v=depth-glass-20261024' });
+  load('link', { rel:'stylesheet', href:'choice-layer.css?v=depth-glass-20261024' });
+  load('link', { rel:'stylesheet', href:'visual-rebalance.css?v=depth-glass-20261024' });
+  const bilingual = document.createElement('script'); bilingual.src = 'bilingual.js?v=depth-glass-20261024'; document.body.append(bilingual);
   const scene = document.createElement('div'); scene.className = 'spatial-void'; scene.innerHTML = '<div class="starfield"></div><div class="scanline"></div>'; document.body.prepend(scene);
   const intro = document.createElement('section'); intro.className = 'spatial-intro reveal'; intro.id = 'signal-space'; intro.innerHTML = '<div class="spatial-copy"><span class="spatial-kicker">SIGNAL ATLAS / SPATIAL INTELLIGENCE</span><h2>看見 AI 背後的<br>整個世界。</h2><p>沿著滾動深入一條看不見的資本鏈：從計算核心，到承載算力的電力、網路與材料。這不是一張表，而是一個可以探索的供應鏈宇宙。</p><span class="scroll-cue">SCROLL TO ENTER <i></i> ↓</span></div>'; main.insertBefore(intro, main.firstElementChild);
   const nodes = [
