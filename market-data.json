@@ -1,11 +1,11 @@
 {
   "source": "Yahoo Finance chart API",
-  "updatedAt": "2026-11-20T20:58:27.019832+00:00",
+  "updatedAt": "2026-11-21T02:06:08.593587+00:00",
   "refreshPolicy": "Every 30 minutes on US trading weekdays",
   "quotes": {
     "QQQ": {
-      "price": 607.07,
-      "change": -10.71,
+      "price": 608.45,
+      "change": -10.51,
       "history": [
         {
           "timestamp": 1794839400,
@@ -22,16 +22,12 @@
         {
           "timestamp": 1795098600,
           "close": 645.04
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 607.07
         }
       ]
     },
     "NVDA": {
-      "price": 124.97,
-      "change": -23.26,
+      "price": 125.53,
+      "change": -22.92,
       "history": [
         {
           "timestamp": 1794839400,
@@ -48,16 +44,12 @@
         {
           "timestamp": 1795098600,
           "close": 145.98
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 124.97
         }
       ]
     },
     "MSFT": {
-      "price": 482.18,
-      "change": -7.96,
+      "price": 484.52,
+      "change": -7.51,
       "history": [
         {
           "timestamp": 1794839400,
@@ -74,16 +66,12 @@
         {
           "timestamp": 1795098600,
           "close": 498.3
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 482.18
         }
       ]
     },
     "AVGO": {
-      "price": 301.75,
-      "change": -13.04,
+      "price": 304.41,
+      "change": -12.28,
       "history": [
         {
           "timestamp": 1794839400,
@@ -100,16 +88,12 @@
         {
           "timestamp": 1795098600,
           "close": 346.65
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 301.75
         }
       ]
     },
     "AMD": {
-      "price": 420.03,
-      "change": -21.35,
+      "price": 424.39,
+      "change": -20.54,
       "history": [
         {
           "timestamp": 1794839400,
@@ -126,16 +110,12 @@
         {
           "timestamp": 1795098600,
           "close": 489.19
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 420.03
         }
       ]
     },
     "TSM": {
-      "price": 318.73,
-      "change": -20.06,
+      "price": 318.71,
+      "change": -20.07,
       "history": [
         {
           "timestamp": 1794839400,
@@ -152,16 +132,12 @@
         {
           "timestamp": 1795098600,
           "close": 352.09
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 318.73
         }
       ]
     },
     "MU": {
-      "price": 589.4,
-      "change": -24.27,
+      "price": 594.51,
+      "change": -23.62,
       "history": [
         {
           "timestamp": 1794839400,
@@ -178,16 +154,12 @@
         {
           "timestamp": 1795098600,
           "close": 690.44
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 589.4
         }
       ]
     },
     "ASML": {
-      "price": 1264.48,
-      "change": -15.43,
+      "price": 1266.22,
+      "change": -15.31,
       "history": [
         {
           "timestamp": 1794839400,
@@ -204,16 +176,12 @@
         {
           "timestamp": 1795098600,
           "close": 1356.2
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 1264.48
         }
       ]
     },
     "AMAT": {
-      "price": 301.41,
-      "change": -18.65,
+      "price": 302.63,
+      "change": -18.32,
       "history": [
         {
           "timestamp": 1794839400,
@@ -230,16 +198,12 @@
         {
           "timestamp": 1795098600,
           "close": 338.93
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 301.41
         }
       ]
     },
     "LRCX": {
-      "price": 182.84,
-      "change": -19.07,
+      "price": 183.27,
+      "change": -18.88,
       "history": [
         {
           "timestamp": 1794839400,
@@ -256,16 +220,12 @@
         {
           "timestamp": 1795098600,
           "close": 203.68
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 182.84
         }
       ]
     },
     "KLAC": {
-      "price": 126.58,
-      "change": -16.9,
+      "price": 126.87,
+      "change": -16.71,
       "history": [
         {
           "timestamp": 1794839400,
@@ -282,16 +242,12 @@
         {
           "timestamp": 1795098600,
           "close": 141.48
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 126.58
         }
       ]
     },
     "ANET": {
-      "price": 165.8,
-      "change": -15.96,
+      "price": 167.62,
+      "change": -15.04,
       "history": [
         {
           "timestamp": 1794839400,
@@ -308,16 +264,12 @@
         {
           "timestamp": 1795098600,
           "close": 189.59
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 165.8
         }
       ]
     },
     "VRT": {
-      "price": 164.49,
-      "change": -18.6,
+      "price": 166.24,
+      "change": -17.73,
       "history": [
         {
           "timestamp": 1794839400,
@@ -334,16 +286,12 @@
         {
           "timestamp": 1795098600,
           "close": 184.99
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 164.49
         }
       ]
     },
     "CEG": {
-      "price": 237.08,
-      "change": -15.39,
+      "price": 237.41,
+      "change": -15.27,
       "history": [
         {
           "timestamp": 1794839400,
@@ -360,16 +308,12 @@
         {
           "timestamp": 1795098600,
           "close": 252.03
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 237.08
         }
       ]
     },
     "SMH": {
-      "price": 397.83,
-      "change": -18.27,
+      "price": 400.06,
+      "change": -17.81,
       "history": [
         {
           "timestamp": 1794839400,
@@ -386,16 +330,12 @@
         {
           "timestamp": 1795098600,
           "close": 447.48
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 397.83
         }
       ]
     },
     "COPX": {
-      "price": 56.18,
-      "change": -18.85,
+      "price": 56.33,
+      "change": -18.63,
       "history": [
         {
           "timestamp": 1794839400,
@@ -412,16 +352,12 @@
         {
           "timestamp": 1795098600,
           "close": 59.28
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 56.18
         }
       ]
     },
     "FCX": {
-      "price": 45.73,
-      "change": -22.81,
+      "price": 45.99,
+      "change": -22.37,
       "history": [
         {
           "timestamp": 1794839400,
@@ -438,16 +374,12 @@
         {
           "timestamp": 1795098600,
           "close": 49.12
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 45.73
         }
       ]
     },
     "LIT": {
-      "price": 51.75,
-      "change": -11.93,
+      "price": 51.98,
+      "change": -11.54,
       "history": [
         {
           "timestamp": 1794839400,
@@ -464,16 +396,12 @@
         {
           "timestamp": 1795098600,
           "close": 54.33
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 51.75
         }
       ]
     },
     "REMX": {
-      "price": 41.99,
-      "change": -16.05,
+      "price": 42.06,
+      "change": -15.91,
       "history": [
         {
           "timestamp": 1794839400,
@@ -490,16 +418,12 @@
         {
           "timestamp": 1795098600,
           "close": 44.32
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 41.99
         }
       ]
     },
     "PICK": {
-      "price": 46.23,
-      "change": -14.24,
+      "price": 46.38,
+      "change": -13.95,
       "history": [
         {
           "timestamp": 1794839400,
@@ -516,16 +440,12 @@
         {
           "timestamp": 1795098600,
           "close": 48.12
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 46.22
         }
       ]
     },
     "GLD": {
-      "price": 322.11,
-      "change": -9.38,
+      "price": 322.87,
+      "change": -9.17,
       "history": [
         {
           "timestamp": 1794839400,
@@ -542,16 +462,12 @@
         {
           "timestamp": 1795098600,
           "close": 335.18
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 322.11
         }
       ]
     },
     "SLV": {
-      "price": 36.84,
-      "change": -16.51,
+      "price": 36.97,
+      "change": -16.22,
       "history": [
         {
           "timestamp": 1794839400,
@@ -568,16 +484,12 @@
         {
           "timestamp": 1795098600,
           "close": 39.64
-        },
-        {
-          "timestamp": 1795185000,
-          "close": 36.85
         }
       ]
     },
     "HG=F": {
       "price": 5.46,
-      "change": -8.95,
+      "change": -8.88,
       "history": [
         {
           "timestamp": 1794805200,
@@ -597,7 +509,7 @@
         },
         {
           "timestamp": 1795150800,
-          "close": 5.46
+          "close": 5.47
         }
       ]
     }
